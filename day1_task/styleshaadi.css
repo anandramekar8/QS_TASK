@@ -1,0 +1,31 @@
+.header{
+    background-color: whitesmoke; 
+}
+
+.logo{
+   width: 240px;
+   height: 128px;
+   padding: 10px;
+}
+
+.right{
+   margin-left: 60%;
+}
+
+.split2{
+      height: 100%;
+      width: 50%;
+      position: fixed;
+}
+
+.left2{
+      left:0;
+      background-color: white;
+}
+
+.right2{
+      right:0;
+      text-align: center;
+      margin:20px;
+}
+
