@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: whitesmoke; float: left 50%;">
+       <h1>what is your name ?</h1>
+           <br>
+       <label for="name">name</label>    
+       <input type="text" id="name">
+       <button onclick="myFunction()">Submit</button>
+
+       <h3 id="message"> </h3>
+      
+       <script>
+           let items = [];
+             function myFunction(){
+                  let userInput = document.querySelector("#name");
+                  let message = document.querySelector("#message");
+                  
+                  items.push(userInput.value);
+                 var pvar = " ";
+                 let p = message.innerHTML;
+                for(let i=0;i<items.length;i++)
+                {
+                   
+                   message.innerHTML = p + "-" +userInput.value;
+                }
+                userInput.value = "";
+
+                //   document.write(pvar);
+     
+             }
+
+       </script>
+</body>
+</html>
