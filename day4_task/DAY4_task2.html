@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+    .block {
+       display: block;
+       margin:3px;
+           }
+      input {
+        width: 50%;
+        display: inline-block;
+}
+  span {
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: underline;
+</style>
+</head>
+ 
+      <body>
+        <div class="optionBox">
+           <div class="block">
+             <input type="text" /> <span class="remove">Remove Option</span>
+           </div>
+           <div class="block"> 
+             <span class="add">Add Option</span>
+           </div>
+        </div>
+ 
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('.add').click(function() {
+    $('.block:last').before('<div class="block"><input type="text" /><span class="remove">Remove Option</span></div>');
+});
+$('.optionBox').on('click','.remove',function() {
+            $(this).parent().remove();
+});
+ 
+</script>
+</body>
+</html>

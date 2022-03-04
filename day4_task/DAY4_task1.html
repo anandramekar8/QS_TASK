@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>DAY4_task1</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+     $(document).ready(function(){
+       $("button").click(function(){
+         $.ajax({url: "https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8", success: function(result){
+           $("#div1").html(result);
+    }});
+  });
+});
+</script>
+</head>
+<body style="text-align:center">
+     <div id="div1">
+<table style="width:100%">
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+     </div>
+       
+     <button style="padding:10px">Call Me</button> 
+</body>
+</html>
