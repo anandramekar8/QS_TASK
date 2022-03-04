@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Day3_task2</title>
+<style>
+     .heading{
+          color:white;
+  } 
+     .tdata{
+          color:white;
+          font-size:20px; 
+  }
+     table,td {
+  border:2px solid white;
+}
+</style>
+</head>
+<body>
+   <div style="background-color:gray; width:50%; text-align: center; height: 100%;padding:20px;position: relative; margin-left: 25%;">
+          <form onSubmit="return false">       
+      <h1 style="color:red;">User input</h1>
+
+
+
+
+
+      <h3>name : <input type="text" id="name"><h3>
+      <h3>email : <input type="email" id="email"><h3> 
+      <h3>phone : <input type="number" id="phone"><h3>
+      <h3>address : <input type="text" id="address"><h3> 
+      <h3>city : <input type="text" id="city"><h3> 
+         
+      <h3>gender :<span>
+                      <input type="radio" value="male" id="gender" name="Gender">
+                      <label for="male">male</label>
+                      <input type="radio" value="female" id="gender" name="Gender">
+                      <label for="female">female</label>  
+                  </span>
+      </h3>
+
+      <h3>country :<span>
+               <select name="country" id="country">
+                  <option value="united states">united states</option>
+                  <option value="ukrein">ukrein</option>
+                  <option value="russia">russia</option>
+                  <option value="india">india</option>
+       </select>
+          </span>
+          
+
+      <br><br><button style="padding:10px;background-color:smokewhite;font-size:20px" onClick="myFunction()">Submit</button><br><br>
+
+      </form>    
+ 
+      <table style="padding:4px;text-align:center;width:100%">
+                            <tr>
+                               <th>NAME</th>
+                               <th>EMAIL</th>
+                               <th>PHONE</th>
+                               <th>ADDRESS</th>
+                               <th>GENDER</th>
+                               <th>COUNTRY</th>
+                            </tr>
+                            <tr>
+                               <td class="tdata" id="rname"> </td>
+                               <td class="tdata"  id="remail"> </td>
+                               <td class="tdata"  id="rphone"> </td>
+                               <td class="tdata"  id="raddress"> </td>
+                               <td class="tdata"  id="rgender"> </td>
+                               <td class="tdata" id="rcountry"> </td>
+                            </tr>
+                  </table>
+   </div>
+   
+                 
+
+   <script>
+        function myFunction(){
+             let vname = document.querySelector("#name");
+             let vemail = document.querySelector("#email");
+             let vphone = document.querySelector("#phone");
+             let vaddress = document.querySelector("#address");
+             let vcity = document.querySelector("#city");
+             let vgender = document.querySelector("#gender");
+             alert(vgender.value);
+             let vcountry = document.querySelector("#country");
+           
+             let rname = document.querySelector("#rname");
+             let remail = document.querySelector("#remail");
+             let rphone = document.querySelector("#rphone");
+             let raddress = document.querySelector("#raddress");
+             let rcity = document.querySelector("#rcity");
+             let rgender = document.querySelector("#rgender");
+             let rcountry = document.querySelector("#rcountry");
+             
+             rname.innerHTML = vname.value;
+             remail.innerHTML = vemail.value;
+             rphone.innerHTML = vphone.value;
+             raddress.innerHTML = vaddress.value;
+             rcity.innerHTML = vcity.value; 
+             rgender.innerHTML = 'Abc';//vgender.value; 
+             rcountry.innerHTML = vcountry.value;
+
+   }
+   </script>
+</body>
+</html>
