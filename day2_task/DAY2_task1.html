@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>DAY2_task1</title>
+<style>
+     .heading{
+          color:white;
+  }
+</style>
+</head>
+<body>
+   <div style="float:left; background-color:whitesmoke; width:50%; text-align: center; height:100%;padding:20px">
+             <h1 style="color:red;">User input</h1>
+      <h3>name : <input type="text" id="name"><h3>
+      <h3>email : <input type="email" id="email"><h3> 
+      <h3>phone : <input type="number" id="phone"><h3>
+      <h3>address : <input type="text" id="address"><h3> 
+      <h3>city : <input type="text" id="city"><h3> 
+         
+      <h3>gender :<span>
+                      <input type="radio" value="male" id="gender" name="gender">
+                      <label for="male">male</label>
+                      <input type="radio" value="female" id="gender" name="gender">
+                      <label for="female">female</label>  
+                  </span>
+      </h3>
+
+      <h3>country :<span>
+               <select name="country" id="country">
+                  <option value="united states">united states</option>
+                  <option value="ukrein">ukrein</option>
+                  <option value="russia">russia</option>
+                  <option value="india">india</option>
+       </select>
+          </span>
+          
+
+      <br><br><button style="padding:10px;background-color:yellowgreen;font-size:20px" onClick="myFunction()">Submit</button>
+   </div>
+   <div style="padding:20px;background-color:red;flaot:left;height:100%;text-align:center;">
+               <h1 style="color:whitesmoke;">Result of user input data</h1>
+      <h3 class="heading" id="rname"> </h3>
+      <h3 class="heading" id="remail"> </h3>
+      <h3 class="heading" id="rphone"> </h3>
+      <h3 class="heading" id="raddress"> </h3>
+      <h3 class="heading" id="rcity"> </h3>
+      <h3 class="heading" id="rgender"> </h3>
+      <h3 class="heading" id="rcountry"> </h3>
+   </div>
+
+   <script>
+        function myFunction(){
+             let vname = document.querySelector("#name");
+             let vemail = document.querySelector("#email");
+             let vphone = document.querySelector("#phone");
+             let vaddress = document.querySelector("#address");
+             let vcity = document.querySelector("#city");
+             let vgender = document.querySelector("#gender");
+             let vcountry = document.querySelector("#country");
+           
+             let rname = document.querySelector("#rname");
+             let remail = document.querySelector("#remail");
+             let rphone = document.querySelector("#rphone");
+             let raddress = document.querySelector("#raddress");
+             let rcity = document.querySelector("#rcity");
+             let rgender = document.querySelector("#rgender");
+             let rcountry = document.querySelector("#rcountry");
+             
+             rname.innerHTML = "NAME :" + vname.value;
+             remail.innerHTML = "EMAIL :" + vemail.value;
+             rphone.innerHTML = "PHONE :" + vphone.value;
+             raddress.innerHTML = "ADDRESS :" + vaddress.value;
+             rcity.innerHTML = "CITY :" + vcity.value; 
+             rgender.innerHTML = "GENDER :" + vgender.value; 
+             rcountry.innerHTML = "COUNTRY :" + vcountry.value
+
+   }
+   </script>
+</body>
+</html>
